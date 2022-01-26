@@ -1,0 +1,45 @@
+// colors
+
+$colors: (
+    primary: #75E6DA,
+    black: #020405,
+    secondary: #8575E5,
+    white: #FFFFFF,
+    primary-faded: rgba(117, 230, 218, 0.17),
+    off-white: #FBFFFF,
+    red: red
+);
+
+$font-sizes: (
+    xx-small: 0.6rem,
+    x-small: 0.8rem,
+    small: 1rem,
+    smaller: 1.2rem,
+    normal: 1.4rem,
+    medium: 1.5rem,
+    large: 1.7rem,
+    x-large: 2.0rem,
+    xx-large: 2.2rem
+);
+
+$font-weights: (
+    light: 300,
+    normal: 400,
+    medium: 500,
+    bold: 600,
+    x-bold: 700,
+    xx-bold: 900
+);
+
+$spacings: (
+    xxx-small: .5rem,
+    xx-small: .7rem,
+    x-small: 1rem,
+    small: 1.2rem,
+    normal: 1.5rem,
+    medium: 1.7rem,
+    large: 2rem,
+    x-large: 2.3rem,
+    xx-large: 2.5rem,
+    xxx-large: 3rem
+)

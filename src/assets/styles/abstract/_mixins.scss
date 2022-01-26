@@ -1,0 +1,7 @@
+@mixin font-size($keyword) {
+    font-size: font-size($keyword);
+  }
+  
+  @mixin font-weight($keyword) {
+    font-weight: font-weight($keyword);
+  }
