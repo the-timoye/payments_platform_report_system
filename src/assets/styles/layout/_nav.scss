@@ -1,0 +1,18 @@
+nav.nav {
+    position: relative;
+    display: block;
+    margin-top: spacing(xxx-large);
+    margin-right: spacing(x-large);
+    padding: spacing(x-large);
+
+    // background-color: color(black);
+
+    ul {
+        display: flex;
+        justify-content: flex-end;
+        a {
+            display: inline-block;
+            margin: 0 spacing(x-small);
+        }
+    }
+}
