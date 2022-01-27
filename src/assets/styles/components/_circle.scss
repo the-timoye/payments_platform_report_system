@@ -1,0 +1,13 @@
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: color(primary-faded);
+    z-index: -200;
+
+    &.nav {
+        top: -25%;
+        right: 1rem;
+        width: 15rem;
+        height: 15rem
+    }
+}

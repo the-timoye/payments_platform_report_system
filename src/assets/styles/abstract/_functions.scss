@@ -16,7 +16,7 @@
     @return null;
 }
 
-@function get-font-weight($key) {
+@function font-weight($key) {
     @if map-has-key($font-weights, $key) {
         @return map-get($font-weights, $key);
     }
