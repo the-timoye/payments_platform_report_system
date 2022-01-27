@@ -1,0 +1,26 @@
+.hero {
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // position: relative;
+    margin: 0 spacing(xxx-large);
+   
+    .intro {
+        position: relative;
+        h1 {
+            font-size: 4.0rem;
+            text-transform: capitalize;
+        }
+    }
+
+    &__image {
+        width: 60rem;
+        margin-left: 20rem;
+        
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}

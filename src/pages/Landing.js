@@ -1,11 +1,11 @@
 import React from "react";
-import { Header } from "../components/Header";
+import { Header, Main } from "../components";
 
 const Landing = () => {
     return (
         <>
             <Header />
-            {/* <p>Hi</p> */}
+            <Main />
         </>
     )
 }

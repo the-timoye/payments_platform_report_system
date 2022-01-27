@@ -21,3 +21,41 @@
         font-weight: $weight !important;
     }
 }
+
+@each $name, $spacing in $spacings {
+    .mr-#{$name} {
+        margin-right: $spacing !important;
+    }
+}
+
+@each $name, $spacing in $spacings {
+    .ml-#{$name} {
+        margin-left: $spacing !important;
+    }
+}
+
+@each $name, $spacing in $spacings {
+    .mt-#{$name} {
+        margin-top: $spacing !important;
+    }
+}
+
+@each $name, $spacing in $spacings {
+    .mb-#{$name} {
+        margin-bottom: $spacing !important;
+    }
+}
+
+@each $name, $spacing in $spacings {
+    .mx-#{$name} {
+        margin-left: $spacing !important;
+        margin-right: $spacing !important;
+    }
+}
+
+@each $name, $spacing in $spacings {
+    .my-#{$name} {
+        margin-top: $spacing !important;
+        margin-bottom: $spacing !important;
+    }
+}
