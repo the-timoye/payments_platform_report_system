@@ -15,6 +15,28 @@
         top: -55%;
         left: -5rem;
         width: 35rem;
-        height: 35rem
+        height: 35rem;
+
+        @include breakpoint(phone) {
+            top: -23rem;
+        }
+    }
+
+    &.footer {
+        top: 1rem;
+        left:16%;
+        width: 25rem;
+        height: 25rem;
+        background-color: color(faded-white);
+        z-index: 200;
+
+        @include breakpoint(tab_portrait) {
+            top: 7rem;
+            left: 20%;
+        }
+        @include breakpoint(phone) {
+            top: 7rem;
+            left: 30%;
+        }
     }
 }

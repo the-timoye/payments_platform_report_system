@@ -5,3 +5,40 @@
   @mixin font-weight($keyword) {
     font-weight: font-weight($keyword);
   }
+
+  @mixin breakpoint($device) {
+    @if $device == desktop {
+        @media screen and (min-width: 1200px) {
+            @content;
+        }
+    }
+
+    @if $device == tab_landscape {
+        @media screen and (max-width: 1024px) {
+            @content;
+        }
+    }
+
+    @if $device == tab_portrait {
+        @media screen and (max-width: 900px) {
+            @content;
+        }
+    }
+
+    // @if $device == tab_portrait {
+    //     @media screen and (max-width: 700px) {
+    //         @content;
+    //     }
+    // }
+
+    @if $device == phone {
+        @media screen and (max-width: 480px) {
+            @content;
+        }
+    }
+    @if $device == s_phone {
+        @media screen and (max-width: 320px) {
+            @content;
+        }
+    }
+}

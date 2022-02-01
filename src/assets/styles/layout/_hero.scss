@@ -1,23 +1,44 @@
 .hero {
-    height: 60vh;
     display: flex;
     flex-direction: row;
     align-items: center;
-    // position: relative;
     margin: 0 spacing(xxx-large);
+    
+    @include breakpoint(tab_portrait) {
+        height: 80rem;
+        
+    }
+        
+    @include breakpoint(phone) {
+        height: auto;
+        flex-direction: column;
+        margin-top: 15rem;
+    }
    
     .intro {
         position: relative;
+
+        @include breakpoint(phone) {
+            margin-bottom: 15rem;
+        }
         h1 {
             font-size: 4.0rem;
             text-transform: capitalize;
+
+            @include breakpoint(tab_portrait) {
+                font-size: 3.5rem;
+            }
         }
     }
 
     &__image {
         width: 60rem;
         margin-left: 20rem;
-        
+
+        @include breakpoint(tab_portrait) {
+            margin-left: 0;
+        }
+
         img {
             width: 100%;
             object-fit: cover;
