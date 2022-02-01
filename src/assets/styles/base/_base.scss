@@ -15,7 +15,7 @@ body {
     height: 100vh;
     overflow: hidden;
 
-    @include breakpoint(phone) {
+    @include breakpoint(tab_landscape) {
         height: auto;
         overflow-x: hidden;
         overflow-y: scroll;

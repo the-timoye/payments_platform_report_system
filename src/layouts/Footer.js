@@ -5,7 +5,7 @@ export const Footer = () => {
     return (
         <footer className="footer">
             <Circle size={"footer"} />
-            <p>
+            <p className="owner">
                 Designed and Developed by <a href='https://thetimoye.netlify.app'>thetimoye</a>
             </p>
         </footer>

@@ -1,19 +1,18 @@
 .footer {
-    // display: flex;
-    // justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     margin-top: 0;
-    height: 27rem;
+    height: 30rem;
     background-color: color(primary);
 
     @include breakpoint(tab_portrait) {
         height: 40rem;
     }
 
-    p {
+    .owner {
         display: block;
-        margin: auto 0;
-        text-align: center;
         z-index: 500;
     }
 

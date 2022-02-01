@@ -17,14 +17,15 @@
         width: 35rem;
         height: 35rem;
 
-        @include breakpoint(phone) {
+        @include breakpoint(tab_landscape) {
             top: -23rem;
         }
     }
 
     &.footer {
+        position: absolute;
         top: 1rem;
-        left:16%;
+        left:43%;
         width: 25rem;
         height: 25rem;
         background-color: color(faded-white);
@@ -32,7 +33,7 @@
 
         @include breakpoint(tab_portrait) {
             top: 7rem;
-            left: 20%;
+            left: 40%;
         }
         @include breakpoint(phone) {
             top: 7rem;
