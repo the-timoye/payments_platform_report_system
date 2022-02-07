@@ -1,11 +1,8 @@
 nav.nav {
     position: relative;
     display: block;
-    margin-top: spacing(xxx-large);
     margin-right: spacing(x-large);
-    padding: spacing(x-large);
-
-    // background-color: color(black);
+    padding: spacing(xx-large) spacing(x-large);
 
     ul {
         display: flex;
