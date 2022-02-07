@@ -1,0 +1,36 @@
+.modal {
+    &__overlay {
+        min-height: 100%;
+        width: 100%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        background-color: rgba(0,0,0,0.25);
+        overflow: hidden;
+        z-index: 2000;
+    }
+    &__body {
+        width: 30%;
+        height: 70%;
+        display: block;
+        margin: auto;
+        padding: spacing(x-large);
+        border: .5px solid color(primary);
+        box-shadow: 3px 3px 6px 5px rgba(0,0,0,0.25);
+        background-color: color(off-white);
+        overflow-x: hidden;
+        overflow-y: scroll;
+
+        .content {
+            &__title {
+                text-align: center;
+                font-weight: 600;
+                color: rgba(131, 126, 126, 0.672);
+            }
+
+            form {
+                margin-top: 5rem;
+            }
+        }
+    }
+}
