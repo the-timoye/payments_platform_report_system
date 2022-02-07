@@ -1,0 +1,35 @@
+.form {
+    &__field {
+        padding: spacing(small);
+        margin-bottom: spacing(medium);
+        border: 1px solid color(primary-faded);
+
+        label {
+            display: block;
+            margin-bottom: 1rem;
+            font-weight: font-weight(bold);
+            color: rgba(131, 126, 126, 0.672);
+        }
+        input {
+            width: 100%;
+            padding: 1rem 0;
+            background: transparent;
+            border: none;
+            font-size: inherit;
+            text-align: right;
+            letter-spacing: inherit;
+            outline: color(primary-faded)
+        }
+    }
+
+    .button {
+        display: block;
+        margin-top: 5rem;
+        margin-left: auto;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: font-weight(bold);
+        color: inherit;
+        letter-spacing: inherit;
+    }
+}
