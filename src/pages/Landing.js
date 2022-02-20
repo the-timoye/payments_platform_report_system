@@ -1,10 +1,13 @@
 import React from "react";
-import { Header, Main } from "../components";
+import { Form, Header, Main, Modal } from "../components";
 import { Footer } from "../layouts";
 
 const Landing = () => {
     return (
         <div className="content">
+            <Modal>
+                <Form />
+            </Modal>
             <Header />
             <Main />
             <Footer />
