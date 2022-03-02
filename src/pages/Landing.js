@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Form, Header, Main, Modal } from "../components";
 import { Footer } from "../layouts";
 
 const Landing = () => {
+    const [showModal, setShowModal] = useState(false);
     return (
         <div className="content">
-            <Modal>
-                <Form />
-            </Modal>
+            {showModal &&
+                <Modal toggle={() => setShowModal(false)}>
+                    <Form />
+                </Modal>}
             <Header />
-            <Main />
+            <Main toggleModal={() => setShowModal(true)} />
             <Footer />
         </div>
     )

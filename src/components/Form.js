@@ -12,13 +12,17 @@ export const Form = () => {
             [attribute]: value
         }))
     }
+    const onSubmit = () => {
+        // e.preventDefault();
+    }
     return (
-        <form className="form">
+        <form className="form" onSubmit={(e) => e.preventDefault()}>
             <div className="form__field">
                 <label>What's Your Name</label>
                 <input
                     name={'name'}
                     type="text"
+                    autoComplete="off"
                     className="form__input"
                     value={state.name}
                     placeholder="Janette Doe"
@@ -36,8 +40,7 @@ export const Form = () => {
                     onChange={(e) => onChange('apiKey', e.target.value)}
                 />
             </div>
-
-            <button className="button button-primary">Explore</button>
+            <button className="button button-primary" onSubmit={onSubmit}>Explore</button>
         </form>
     )
 }
