@@ -20,12 +20,25 @@
         background-color: color(off-white);
         overflow-x: hidden;
         overflow-y: scroll;
+        @include animate(zoomIn, .5s, 1, normal, ease-in-out);
 
         @include breakpoint(tab_landscape) {
             width: 50%;
         }
         @include breakpoint(phone) {
             width: 90%;
+        }
+
+        &-close {
+            margin-right: -3%;
+            cursor: pointer;
+            font-size: font-size(x-large);
+            font-weight: font-weight(bold);
+            text-align: right;
+            color: color(red);
+            &:hover {
+                font-weight: font-weight(x-bold);
+            }      
         }
 
         .content {
