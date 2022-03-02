@@ -1,0 +1,25 @@
+.loader {
+    width: 50%;
+    margin: auto;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    div {
+        width: 1rem;
+        height: 1rem;
+        margin-right: 1rem;
+        border-radius: 50%;
+        background-color: color(secondary);
+        &:first-child {
+            @include animate(loaderA, .5s, infinite, normal, ease);
+        }
+        &:nth-child(2){
+            @include animate(loaderA, .5s, infinite, normal, ease, .1s);
+        }
+        &:last-child  {
+            @include animate(loaderA, .5s, infinite, normal, ease, .2s);
+        }
+        
+    }
+ 
+}

@@ -8,7 +8,7 @@
             display: block;
             margin-bottom: 1rem;
             font-weight: font-weight(bold);
-            color: rgba(131, 126, 126, 0.672);
+            color: color(grey);
         }
         input {
             width: 100%;
@@ -22,8 +22,9 @@
         }
     }
 
-    .button {
+    span.button {
         display: block;
+        width: 10rem;
         margin-top: 5rem;
         margin-left: auto;
         font-size: inherit;

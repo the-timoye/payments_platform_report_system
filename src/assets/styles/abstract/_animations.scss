@@ -6,12 +6,17 @@
         transform: scale(1)
     }
 }
-@include keyframes(slideInFromTop) {
+@include keyframes(loaderA) {
     0% {
-        margin-top: 5%;
+        transform: scale(.5);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.5);
     }
     100% {
-
-        margin: auto
+        transform: scale(.5);
     }
 }

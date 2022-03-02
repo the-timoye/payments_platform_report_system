@@ -57,7 +57,7 @@
         @content;
     }
 }
-@mixin animate($name, $duration, $iteration, $direction, $timing-function) {
+@mixin animate($name, $duration, $iteration, $direction, $timing-function, $delay:0) {
     -webkit-animation-duration: $duration;
     -moz-animation-duration: $duration;
     -o-animation-duration: $duration;
@@ -78,4 +78,8 @@
     -moz-animation-timing-function: $timing-function;
     -o-animationanimation-timing-function: $timing-function;
     animation-timing-function: $timing-function;
+    -webkit-animation-delay: $timing-function;
+    -moz-animation-delay: $delay;
+    -o-animationanimation-delay: $delay;
+    animation-delay: $delay;
 }
