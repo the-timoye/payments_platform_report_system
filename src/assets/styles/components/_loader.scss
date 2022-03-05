@@ -11,13 +11,13 @@
         border-radius: 50%;
         background-color: color(secondary);
         &:first-child {
-            @include animate(loaderA, .5s, infinite, normal, ease);
+            @include animate(loaderA, 1s, infinite, normal, ease);
         }
         &:nth-child(2){
-            @include animate(loaderA, .5s, infinite, normal, ease, .1s);
+            @include animate(loaderA, 1s, infinite, normal, ease, .1s);
         }
         &:last-child  {
-            @include animate(loaderA, .5s, infinite, normal, ease, .2s);
+            @include animate(loaderA, 1s, infinite, normal, ease, .2s);
         }
         
     }
