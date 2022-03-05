@@ -1,0 +1,26 @@
+.overview {
+    &__cards-container {
+        display: flex;
+        font-weight: font-weight(x-bold);
+
+        &__card {
+            min-width: 30rem;
+            width: 40rem;
+            height: 20rem;
+            margin-right: 10rem;
+            padding: 2rem;
+
+            border: 1px solid color(primary-faded);
+            box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.04);
+
+            p.title {
+                text-transform: capitalize;
+            }
+            p.count {
+                margin-top: 3.5rem;
+                font-size: font-size(xxx-large);
+                text-align: center;
+            }
+        }
+    }
+}
