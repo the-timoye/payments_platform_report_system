@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import chartIcon from "../../assets/images/chart.svg";
 import listIcon from "../../assets/images/list.svg";
 import userSettingsIcon from "../../assets/images/setting.svg";
@@ -7,7 +8,7 @@ import signOutIcon from "../../assets/images/signout.svg";
 export const Sidebar = () => {
     const tabs = [
         { title: "stats", url: "/dashboard", icon: chartIcon },
-        { title: "listings", url: "/dashboard/listings", icon: listIcon, },
+        { title: "listings", url: "/dashboard/lists", icon: listIcon, },
         { title: "plots", url: "/dashboard/plots", icon: userSettingsIcon },
     ];
     const [isActive, setIsActive] = useState({ [tabs[0].title]: true });
@@ -19,12 +20,14 @@ export const Sidebar = () => {
             <div className="sidebar__nav">
                 {tabs.map((tab) => {
                     return (
-                        <img
-                            key={tab.title}
-                            className={`sidebar__nav-link ${isActive[tab.title] ? "active" : ""}`}
-                            src={tab.icon} alt={tab.title}
-                            onClick={() => setIsActive(() => ({ [tab.title]: true }))}
-                        />
+                        <Link to={tab.url}>
+                            <img
+                                key={tab.title}
+                                className={`sidebar__nav-link ${isActive[tab.title] ? "active" : ""}`}
+                                src={tab.icon} alt={tab.title}
+                                onClick={() => setIsActive(() => ({ [tab.title]: true }))}
+                            />
+                        </Link>
                     )
                 })}
                 {console.log(isActive)}

@@ -1,7 +1,7 @@
 import React from "react";
 import { MainLayout } from "./main";
 
-export const Overview = () => {
+export const Lists = () => {
     const cardItems = [
         { title: "total subscribers", count: 600 },
         { title: "amount earned", count: 8000, currency: "$" },
@@ -10,22 +10,23 @@ export const Overview = () => {
     return (
         <MainLayout name="Timi"
             subtitle={"See all payments made by your customers"}
+            showSections
         >
-            <div className="overview">
-                <div className="overview__cards-container">
+            <div className="lists">
+                <div className="lists__cards-container">
                     {cardItems.map(({ title, count, currency }) => {
                         return (
-                            <div key={title} className="overview__cards-container__card">
+                            <div className="lists__cards-container__card">
                                 <p className="title">{title}</p>
                                 <p className="count"> {currency && currency}{count}</p>
                             </div>
                         )
                     })}
                 </div>
-                <div className="overview__charts">
-                    <div className="overview__charts-main"></div>
+                <div className="lists__charts">
+                    <div className="lists__charts-main"></div>
 
-                    <div className="overview__charts-sub"></div>
+                    <div className="lists__charts-sub"></div>
                 </div>
             </div>
         </MainLayout>

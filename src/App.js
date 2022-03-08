@@ -4,6 +4,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import routes from "./components/routes";
 import Dashboard from "./pages/Dashboard";
 import Landing from './pages/Landing'
 
@@ -12,7 +13,16 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        {routes.map((route) => {
+          const Component = route.component
+          return (
+            <Route
+              key={route.url}
+              path={route.url}
+              element={<Dashboard children={<Component />} />}
+            />
+          )
+        })}
       </Routes>
     </Router>
   );

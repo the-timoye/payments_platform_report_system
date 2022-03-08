@@ -1,15 +1,18 @@
 import React from "react";
-import { MainLayout } from "../layouts/dashboard/main";
-import { Overview } from "../layouts/dashboard/overview";
+import PropTypes from "proptypes";
 import { Sidebar } from "../layouts/dashboard/sidebar";
 
-const Dashboard = () => {
+const Dashboard = ({ children }) => {
     return (
         <div className="dashboard">
             <Sidebar />
-            <Overview Layout={MainLayout} />
+            {children}
         </div>
     )
+};
+
+Dashboard.propTypes = {
+    children: PropTypes.object
 }
 
 export default Dashboard;

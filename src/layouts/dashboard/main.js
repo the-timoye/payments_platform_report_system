@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import downarrow from "../../assets/images/downarrow.svg";
 import uparrow from "../../assets/images/uparrow.svg";
 
-export const MainLayout = ({ name, subtitle, children }) => {
+export const MainLayout = ({ name, subtitle, children, showSections }) => {
     const options = [
         { title: "Subscribers", id: "subscribers" },
         { title: "Payments", id: "payments" }
@@ -22,30 +22,31 @@ export const MainLayout = ({ name, subtitle, children }) => {
                         <h3 className="dashboard-main__header-title">Hello {name}</h3>
                         <span className="dashboard-main__header-subtitle"> {subtitle || null} </span>
                     </div>
-
-                    <div className="dashboard-main__header-selector">
-                        <p className="dashboard-main__header-selector-title"
-                            onClick={() => setShowOptions(!showOptions)}
-                        >
-                            {activeOption.title}
-                            {showOptions ?
-                                <img src={uparrow} alt="less" />
-                                : <img src={downarrow} alt="more" />}
-                        </p>
-                        {showOptions && (
-                            <div className="options">
-                                <ul>
-                                    {options.map(({ title, id }) => {
-                                        return (
-                                            activeOption.id !== id && (
-                                                <li key={id} onClick={() => selectOption({ title, id })}>{title}</li>
+                    {showSections && (
+                        <div className="dashboard-main__header-selector">
+                            <p className="dashboard-main__header-selector-title"
+                                onClick={() => setShowOptions(!showOptions)}
+                            >
+                                {activeOption.title}
+                                {showOptions ?
+                                    <img src={uparrow} alt="less" />
+                                    : <img src={downarrow} alt="more" />}
+                            </p>
+                            {showOptions && (
+                                <div className="options">
+                                    <ul>
+                                        {options.map(({ title, id }) => {
+                                            return (
+                                                activeOption.id !== id && (
+                                                    <li key={id} onClick={() => selectOption({ title, id })}>{title}</li>
+                                                )
                                             )
-                                        )
-                                    })}
-                                </ul>
-                            </div>
-                        )}
-                    </div>
+                                        })}
+                                    </ul>
+                                </div>
+                            )}
+                        </div>
+                    )}
                 </div>
 
             )}
