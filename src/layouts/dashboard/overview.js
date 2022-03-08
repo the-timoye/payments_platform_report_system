@@ -21,6 +21,11 @@ export const Overview = ({ Layout }) => {
                         )
                     })}
                 </div>
+                <div className="overview__charts">
+                    <div className="overview__charts-main"></div>
+
+                    <div className="overview__charts-sub"></div>
+                </div>
             </div>
         </Layout>
 
